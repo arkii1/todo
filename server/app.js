@@ -5,6 +5,12 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
+const { default: mongoose } = require('mongoose');
+
+const mongoDB = MONGO_URI
+mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true })
+const db = mongoose.connection
+db.on("error", console.error.bind(console, "MongoDB connection error:"))
 
 var app = express();
 
