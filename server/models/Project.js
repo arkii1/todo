@@ -12,6 +12,7 @@ const ProjectSchema = new Schema({
       'https://img.freepik.com/premium-vector/hand-painted-background-violet-orange-colours_23-2148427578.jpg?w=2000',
   },
   created: { type: Date, required: true },
+  lastUpdated: { type: Date, required: true },
   createdUser: { type: Schema.Types.ObjectId, ref: 'User', required: true },
   contributors: [{ type: Schema.Types.ObjectId, ref: 'User' }],
 })
