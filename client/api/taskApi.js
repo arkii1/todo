@@ -1,5 +1,7 @@
-export function getTask() {
-  console.log('NOT IMPLEMENTED')
+export async function getTask(id) {
+  const task = await fetch(`/task/get/${id}`)
+  const json = await task.json()
+  return json
 }
 
 export function createTask() {
