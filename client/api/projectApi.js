@@ -1,6 +1,6 @@
 export async function getProject(id) {
-  const project = await fetch(`/project/get/${id}`)
-  const json = await project.json()
+  const res = await fetch(`/project/get/${id}`)
+  const json = await res.json()
   return json
 }
 

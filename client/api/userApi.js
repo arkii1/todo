@@ -1,6 +1,6 @@
 export async function getUser(id) {
-  const user = await fetch(`/user/get/${id}`)
-  const json = await user.json()
+  const res = await fetch(`/user/get/${id}`)
+  const json = await res.json()
   return json
 }
 export function createUser() {

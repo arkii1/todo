@@ -1,6 +1,6 @@
 export async function getTask(id) {
-  const task = await fetch(`/task/get/${id}`)
-  const json = await task.json()
+  const res = await fetch(`/task/get/${id}`)
+  const json = await res.json()
   return json
 }
 

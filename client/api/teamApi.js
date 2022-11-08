@@ -1,6 +1,6 @@
 export async function getTeam(id) {
-  const team = await fetch(`/team/get/${id}`)
-  const json = await team.json()
+  const res = await fetch(`/team/get/${id}`)
+  const json = await res.json()
   return json
 }
 
