@@ -4,14 +4,33 @@ export async function getProject(id) {
   return json
 }
 
-export function createProject() {
-  console.log('NOT IMPLEMENTED')
+export async function createProject(body) {
+  const res = await fetch('/project/create', {
+    mode: 'cors',
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  })
+
+  return res.status
 }
 
-export function updateProject() {
-  console.log('NOT IMPLEMENTED')
+export async function updateProject(id, body) {
+  const res = await fetch(`/project/create/${id}`, {
+    mode: 'cors',
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  })
+
+  return res.status
 }
 
-export function deleteProject() {
-  console.log('NOT IMPLEMENTED')
+export async function deleteProject(id) {
+  const res = await fetch(`/project/delete/${id}`)
+  return res.status
 }

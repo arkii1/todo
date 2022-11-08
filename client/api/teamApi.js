@@ -4,14 +4,33 @@ export async function getTeam(id) {
   return json
 }
 
-export function createTeam() {
-  console.log('NOT IMPLEMENTED')
+export async function createTeam(body) {
+  const res = await fetch('/team/create', {
+    mode: 'cors',
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  })
+
+  return res.status
 }
 
-export function updateTeam() {
-  console.log('NOT IMPLEMENTED')
+export async function updateTeam(id, body) {
+  const res = await fetch(`/team/create/${id}`, {
+    mode: 'cors',
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  })
+
+  return res.status
 }
 
-export function deleteTeam() {
-  console.log('NOT IMPLEMENTED')
+export async function deleteTeam(id) {
+  const res = await fetch(`/task/team/${id}`)
+  return res.status
 }

@@ -3,14 +3,33 @@ export async function getUser(id) {
   const json = await res.json()
   return json
 }
-export function createUser() {
-  console.log('NOT IMPLEMENTED')
+export async function createUser(body) {
+  const res = await fetch('/user/create', {
+    mode: 'cors',
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  })
+
+  return res.status
 }
 
-export function updateUser() {
-  console.log('NOT IMPLEMENTED')
+export async function updateUser(id, body) {
+  const res = await fetch(`/user/create/${id}`, {
+    mode: 'cors',
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  })
+
+  return res.status
 }
 
-export function deleteUser() {
-  console.log('NOT IMPLEMENTED')
+export async function deleteUser(id) {
+  const res = await fetch(`/user/delete/${id}`)
+  return res.status
 }
