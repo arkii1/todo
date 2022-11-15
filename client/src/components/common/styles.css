@@ -1,0 +1,20 @@
+@import url('../../index.css');
+.project-card--purple {
+    background-color: rgb(var(--purple));
+    color: rgb(var(--white));
+}
+
+.project-card--green {
+    background-color: rgb(var(--green));
+    color: rgb(var(--white));
+}
+
+.project-card--yellow {
+    background-color: rgb(var(--yellow));
+    color: rgb(var(--white));
+}
+
+.project-card--pink {
+    background-color: rgb(var(--pink));
+    color: rgb(var(--white));
+}
