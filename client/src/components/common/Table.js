@@ -28,5 +28,7 @@ export default Table
 
 Table.propTypes = {
   headerArr: propTypes.arrayOf(propTypes.string).isRequired,
-  dataArr: propTypes.arrayOf(propTypes.arrayOf(propTypes.string)).isRequired,
+  dataArr: propTypes.arrayOf(
+    propTypes.arrayOf(propTypes.oneOfType([propTypes.string, propTypes.object]))
+  ).isRequired,
 }
