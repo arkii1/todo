@@ -54,3 +54,15 @@ exports.deleteProject = function (req, res, next) {
     return next()
   })
 }
+
+exports.getAllProjects = async function (req, res, next) {
+  try {
+    const projects = await Project.find()
+    res.json(projects)
+    res.status = 200
+    return next()
+  } catch (err) {
+    res.status = 404
+    return next(err)
+  }
+}
