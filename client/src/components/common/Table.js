@@ -13,7 +13,7 @@ function Table({ headerArr, dataArr }) {
     </tr>
   ))
   return (
-    <div className="overflow-x-auto p-3">
+    <div className="overflow-x-auto p-3 w-full">
       <table className="table table-zebra w-full">
         <thead>
           <tr>{headers}</tr>
