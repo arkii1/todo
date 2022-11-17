@@ -34,3 +34,9 @@ export async function deleteProject(id) {
   const res = await fetch(`/project/delete/${id}`)
   return res.status
 }
+
+export async function getAllProjects() {
+  const res = await fetch('/project/all')
+  const json = await res.json()
+  return json
+}
