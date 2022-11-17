@@ -16,6 +16,7 @@ router.post('/project/create', projectController.createProject)
 router.get('/project/get/:id', projectController.getProject)
 router.get('/project/update/:id', projectController.updateProject)
 router.get('/project/delete/:id', projectController.deleteProject)
+router.get('/prject/all', projectController.getAllProjects)
 
 router.post('/user/create', userController.createUser)
 router.get('/user/get/:id', userController.getUser)
