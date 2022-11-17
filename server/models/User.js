@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const { Schema } = mongoose
 
-const TeamSchema = new Schema({
+const UserSchema = new Schema({
   firstName: { type: String, required: true },
   lastName: { type: String, required: true },
   slug: { type: String, required: true },
@@ -15,4 +15,4 @@ const TeamSchema = new Schema({
   projects: [{ type: Schema.Types.ObjectId, ref: 'Project' }],
 })
 
-module.exports = mongoose.model('Team', TeamSchema)
+module.exports = mongoose.model('User', UserSchema)
