@@ -10,9 +10,17 @@
       "prettier"
     ],
     "rules": {
+     "no-underscore-dangle": 0,
       "semi": 0,
       "quotes": ["error", "single"],
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "react/require-default-props": [
+        "error", 
+        {
+          "forbidDefaultForRequired": true,        
+          "functions": "defaultArguments" //Here
+        }
+      ],
       "prettier/prettier": [
         "error", {
           "semi": false, 
