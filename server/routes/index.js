@@ -13,7 +13,6 @@ router.post('/team/update/:id', teamController.updateTeam)
 router.get('/team/delete/:id', teamController.deleteTeam)
 
 router.post('/project/create', projectController.createProject)
-router.get('/project/get/:id', projectController.getProject)
 router.get('/project/update/:id', projectController.updateProject)
 router.get('/project/delete/:id', projectController.deleteProject)
 router.get('/prject/all', projectController.getAllProjects)
