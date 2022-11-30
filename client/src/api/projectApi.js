@@ -1,11 +1,7 @@
-export async function getProject(id) {
-  const res = await fetch(`/project/get/${id}`)
-  const json = await res.json()
-  return json
-}
+const server = 'http://localhost:5000'
 
 export async function createProject(body) {
-  const res = await fetch('/project/create', {
+  const res = await fetch(`${server}/project/create`, {
     mode: 'cors',
     method: 'POST',
     headers: {
@@ -18,7 +14,7 @@ export async function createProject(body) {
 }
 
 export async function updateProject(id, body) {
-  const res = await fetch(`/project/create/${id}`, {
+  const res = await fetch(`${server}/project/create/${id}`, {
     mode: 'cors',
     method: 'POST',
     headers: {
@@ -31,12 +27,12 @@ export async function updateProject(id, body) {
 }
 
 export async function deleteProject(id) {
-  const res = await fetch(`/project/delete/${id}`)
+  const res = await fetch(`${server}/project/delete/${id}`)
   return res.status
 }
 
 export async function getAllProjects() {
-  const res = await fetch('/project/all')
+  const res = await fetch(`${server}/project/all`)
   const json = await res.json()
   return json
 }
