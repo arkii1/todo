@@ -2,6 +2,10 @@ const express = require('express')
 
 const router = express.Router()
 
+router.get('/', function(req, res, next) {
+    res.send('working')
+})
+
 const teamController = require('../controllers/teamController')
 const projectController = require('../controllers/projectController')
 const userController = require('../controllers/userController')
@@ -15,7 +19,7 @@ router.get('/team/delete/:id', teamController.deleteTeam)
 router.post('/project/create', projectController.createProject)
 router.get('/project/update/:id', projectController.updateProject)
 router.get('/project/delete/:id', projectController.deleteProject)
-router.get('/prject/all', projectController.getAllProjects)
+router.get('/project/all', projectController.getAllProjects)
 
 router.post('/user/create', userController.createUser)
 router.get('/user/get/:id', userController.getUser)
