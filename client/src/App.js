@@ -3,7 +3,7 @@ import React from 'react'
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import Sidebar from './components/layout/Sidebar'
+import Navbar from './components/layout/Navbar'
 import PinnedList from './components/common/PinnedList'
 import Table from './components/common/Table'
 import Footer from './components/layout/Footer'
@@ -20,7 +20,7 @@ function App() {
     <div className="App min-h-screen">
       <ProjectProvider>
         <BrowserRouter>
-          <Sidebar />
+          <Navbar />
           <main className="pt-5 flex flex-col justify-start align-start">
             <Header />
             <Routes>
