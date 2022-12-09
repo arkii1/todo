@@ -27,7 +27,7 @@ function App() {
               <Route
                 index
                 element={
-                  <>
+                  <div className="flex flex-col gap-3">
                     <PinnedList
                       title="Pinned Projects"
                       dataArr={[
@@ -105,13 +105,13 @@ function App() {
                         ['Placeholder', 'Yesterday'],
                       ]}
                     />
-                  </>
+                  </div>
                 }
               />
               <Route
                 path="all-tasks"
                 element={
-                  <>
+                  <div className="flex flex-col gap-3">
                     <span className="px-3">
                       <CreateTaskModal />
                     </span>
@@ -181,7 +181,7 @@ function App() {
                         ],
                       ]}
                     />
-                  </>
+                  </div>
                 }
               />
             </Routes>
