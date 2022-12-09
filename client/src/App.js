@@ -10,6 +10,7 @@ import Footer from './components/layout/Footer'
 import Header from './components/layout/Header'
 import Checkbox from './components/common/Checkbox'
 import CreateTaskModal from './components/common/CreateTaskModal'
+import Details from './components/common/Details'
 
 import { ProjectProvider } from './contexts/ProjectContext'
 
@@ -131,9 +132,7 @@ function App() {
                         [
                           'Create x',
                           'Project Y',
-                          <button className="btn" type="button">
-                            Details
-                          </button>,
+                          <Details />,
                           'Today',
                           'High',
                           'Today',
