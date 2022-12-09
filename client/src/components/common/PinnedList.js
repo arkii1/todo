@@ -2,6 +2,8 @@ import React from 'react'
 import propTypes from 'prop-types'
 import PinnedCard from './PinnedCard'
 
+import './styles.css'
+
 function PinnedList({ title, dataArr }) {
   return (
     <div className="pinned-list flex flex-col justify-around px-3 pt-0 pb-3 gap-2">

@@ -8,7 +8,7 @@ function PinnedCard({ initials, name, teamColour, link }) {
     <a
       key={initials}
       href={link}
-      className="flex rounded-md border-solid border w-1/5 "
+      className="pinned-card flex rounded-md border-solid border w-1/5 "
     >
       <span className={`project-card--${teamColour} rounded-l-md p-3`}>
         {initials}
