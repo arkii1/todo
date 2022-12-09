@@ -5,18 +5,22 @@ import uniqid from 'uniqid'
 function Table({ headerArr, dataArr }) {
   const headers = headerArr.map((h) => <th key={uniqid()}>{h}</th>)
 
-  const rows = dataArr.map((data) => (
+  const rows = dataArr.map((data, index) => (
     <tr key={uniqid()}>
+      <td>{index + 1}</td>
       {data.map((d) => (
         <td key={uniqid()}>{d}</td>
       ))}
     </tr>
   ))
   return (
-    <div className="overflow-x-auto p-3 w-full">
-      <table className="table table-zebra w-full">
+    <div className="overflow-x-auto">
+      <table className="table table-zebra">
         <thead>
-          <tr>{headers}</tr>
+          <tr>
+            <th />
+            {headers}
+          </tr>
         </thead>
         <tbody>{rows}</tbody>
       </table>
