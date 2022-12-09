@@ -1,0 +1,29 @@
+@media screen and (max-width: 499px) {
+    .navbar, .navbar--hide {
+        height: 100vh;
+        max-width: 80vw;
+        z-index: 999;
+        transition: 0.25s;
+    }
+
+    .navbar--hide {
+        transform: translateX(-80vw);
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 999px) {
+    .navbar, .navbar--hide {
+        height: 100vh;
+        max-width: 80vw;
+        z-index: 999;
+        transition: 0.25s;
+    }
+
+    .navbar--hide {
+        transform: translateX(-80vw);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    
+}
