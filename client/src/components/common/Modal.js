@@ -14,7 +14,7 @@ function Modal({ title, content }) {
   return (
     <>
       <button className="btn" type="button" onClick={activateModal}>
-        Create Task
+        {title}
       </button>
       {activeModal && (
         <>
