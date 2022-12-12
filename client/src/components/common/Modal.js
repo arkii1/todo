@@ -18,10 +18,10 @@ function Modal({ title, content }) {
       </button>
       {activeModal && (
         <>
-          <div className="absolute w-screen h-screen z-50 bg-gray-700/75 inset-0" />
+          <div className="fixed w-screen h-screen z-50 bg-gray-700/75 inset-0" />
           <div
             ref={modalRef}
-            className="absolute p-3 z-50 bg-white inset-1/2 w-1/5 rounded-lg h-max"
+            className="fixed p-3 z-50 bg-white inset-x-1/2 inset-y-1/3 w-1/5 rounded-lg h-max"
             style={{ transform: 'translate(-50%, -50%)' }}
           >
             <h3 className="px-1">{title}</h3>
