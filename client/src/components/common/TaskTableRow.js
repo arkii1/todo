@@ -30,16 +30,16 @@ function TaskTableRow({
           content={
             <TaskForm
               active={false}
-              taskData={
-                (id,
+              taskData={{
+                id,
                 name,
                 description,
                 project,
                 priority,
                 createdAt,
                 due,
-                completed)
-              }
+                completed,
+              }}
             />
           }
         />
@@ -53,20 +53,20 @@ function TaskTableRow({
       <td>
         {' '}
         <Modal
-          title="Details"
+          title="Edit"
           content={
             <TaskForm
               active
-              taskData={
-                (id,
+              taskData={{
+                id,
                 name,
                 description,
                 project,
                 priority,
                 createdAt,
                 due,
-                completed)
-              }
+                completed,
+              }}
             />
           }
         />
