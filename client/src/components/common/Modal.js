@@ -21,6 +21,7 @@ function Modal({ title, content }) {
           <div
             ref={modalRef}
             className="fixed p-3 z-50 bg-white rounded-lg h-max top-8 sm:top-12 md:top-20 "
+            style={{ maxWidth: '80%' }}
           >
             <h3 className="px-1">{title}</h3>
             {content}
