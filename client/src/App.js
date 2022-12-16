@@ -7,15 +7,15 @@ import PinnedList from './components/common/PinnedList'
 import Table from './components/common/Table'
 import Footer from './components/layout/Footer'
 import Header from './components/layout/Header'
-import Checkbox from './components/common/Checkbox'
 import Modal from './components/common/Modal'
-import Details from './components/common/Details'
+import TaskForm from './components/common/TaskForm'
+import TaskTableRow from './components/common/TaskTableRow'
 
 import { ProjectProvider } from './contexts/ProjectContext'
 
 function App() {
   return (
-    <div className="App min-h-screen">
+    <div className="App min-h-screen overflow-x-hidden">
       <ProjectProvider>
         <BrowserRouter>
           <Navbar />
@@ -55,7 +55,7 @@ function App() {
                         },
                       ]}
                     />
-                    <Table
+                    {/* <Table
                       headerArr={['Project', 'Last Updated']}
                       dataArr={[
                         ['Placeholder', 'Yesterday'],
@@ -63,7 +63,7 @@ function App() {
                         ['Placeholder', 'Yesterday'],
                         ['Placeholder', 'Yesterday'],
                       ]}
-                    />
+                    /> */}
                     <div className="divider px-3" />
                     <PinnedList
                       title="Pinned Teams"
@@ -94,7 +94,7 @@ function App() {
                         },
                       ]}
                     />
-                    <Table
+                    {/* <Table
                       headerArr={['Team', 'Last Updated']}
                       dataArr={[
                         ['Placeholder', 'Yesterday'],
@@ -102,7 +102,7 @@ function App() {
                         ['Placeholder', 'Yesterday'],
                         ['Placeholder', 'Yesterday'],
                       ]}
-                    />
+                    /> */}
                   </div>
                 }
               />
@@ -111,55 +111,7 @@ function App() {
                 element={
                   <div className="flex flex-col gap-3">
                     <span className="px-3">
-                      <Modal
-                        title="Create Task"
-                        content={
-                          <form className="h-max py-4 flex flex-col gap-3">
-                            <input
-                              name="task-name"
-                              type="text"
-                              placeholder="Type here"
-                              className="input input-bordered w-full "
-                            />
-                            <textarea
-                              className="textarea textarea-bordered h-24"
-                              placeholder="Description"
-                              name="task-description"
-                            />
-
-                            <select className="select select-bordered">
-                              <option disabled selected>
-                                Project
-                              </option>
-                              <option>Star Wars</option>
-                              <option>Harry Potter</option>
-                              <option>Lord of the Rings</option>
-                              <option>Planet of the Apes</option>
-                              <option>Star Trek</option>
-                            </select>
-
-                            <select className="select select-bordered">
-                              <option disabled selected>
-                                Priority
-                              </option>
-                              <option>Low</option>
-                              <option>Medium</option>
-                              <option>High</option>
-                              <option>Critical</option>
-                            </select>
-
-                            <input
-                              type="date"
-                              className="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                              placeholder="Select a date"
-                            />
-
-                            <button type="button" className="btn">
-                              Create Task
-                            </button>
-                          </form>
-                        }
-                      />
+                      <Modal title="Create Task" content={<TaskForm />} />
                     </span>
                     <Table
                       headerArr={[
@@ -173,56 +125,57 @@ function App() {
                         'Edit',
                         'Delete',
                       ]}
-                      dataArr={[
-                        [
-                          'Create x',
-                          'Project Y',
-                          <Details />,
-                          'Today',
-                          'High',
-                          'Today',
-                          <Checkbox forName="one" />,
-                          <button className="btn" type="button">
-                            Edit
-                          </button>,
-                          <button className="btn" type="button">
-                            Delete
-                          </button>,
-                        ],
-                        [
-                          'Create A',
-                          'Project Y',
-                          <button className="btn" type="button">
-                            Details
-                          </button>,
-                          'Today',
-                          'High',
-                          'Today',
-                          <Checkbox forName="two" />,
-                          <button className="btn" type="button">
-                            Edit
-                          </button>,
-                          <button className="btn" type="button">
-                            Delete
-                          </button>,
-                        ],
-                        [
-                          'Create X',
-                          'Project y',
-                          <button className="btn" type="button">
-                            Details
-                          </button>,
-                          'Today',
-                          'High',
-                          'Today',
-                          <Checkbox forName="three" />,
-                          <button className="btn" type="button">
-                            Edit
-                          </button>,
-                          <button className="btn" type="button">
-                            Delete
-                          </button>,
-                        ],
+                      rows={[
+                        <TaskTableRow
+                          index={1}
+                          id="1"
+                          name="Task 1"
+                          project="Project 1"
+                          description="Test description 1"
+                          due="2022-11-25"
+                          priority="High"
+                          createdAt="2022-11-25"
+                        />,
+                        <TaskTableRow
+                          index={2}
+                          id="2"
+                          name="Task 2"
+                          project="Project 2"
+                          description="Test description 2"
+                          due="2022-11-25"
+                          priority="High"
+                          createdAt="2022-11-25"
+                        />,
+                        <TaskTableRow
+                          index={3}
+                          id="3"
+                          name="Task 3"
+                          project="Project 3"
+                          description="Test description 3"
+                          due="2022-11-25"
+                          priority="High"
+                          createdAt="2022-11-25"
+                        />,
+                        <TaskTableRow
+                          index={4}
+                          id="4"
+                          name="Task 4"
+                          project="Project 4"
+                          description="Test description 4"
+                          due="2022-11-25"
+                          priority="High"
+                          createdAt="2022-11-25"
+                        />,
+                        <TaskTableRow
+                          index={5}
+                          id="5"
+                          name="Task 5"
+                          project="Project 5"
+                          description="Test description 5"
+                          due="2022-11-25"
+                          priority="High"
+                          createdAt="2022-11-25"
+                        />,
                       ]}
                     />
                   </div>
