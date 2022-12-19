@@ -20,7 +20,7 @@ function App() {
       <ProjectProvider>
         <BrowserRouter>
           <Navbar />
-          <main className="pt-5 flex flex-col justify-start align-start">
+          <main className="py-5 flex flex-col justify-start align-start">
             <Header />
             <Routes>
               <Route
@@ -60,76 +60,147 @@ function App() {
                       headerArr={['Project', 'Last Updated']}
                       rows={[
                         <ProjectTableRow
-                          index={1}
+                          colour="#0ea5e9"
                           name="Project 1"
+                          team="Enginnering"
                           lastUpdated="Today"
                           link="test"
                         />,
                         <ProjectTableRow
-                          index={2}
+                          colour="#0ea5e9"
                           name="Project 2"
+                          team="Human Resources"
                           lastUpdated="Today"
                           link="test"
                         />,
                         <ProjectTableRow
-                          index={3}
+                          colour="#0ea5e9"
                           name="Project 3"
+                          team="Enginnering"
                           lastUpdated="Today"
                           link="test"
                         />,
                         <ProjectTableRow
-                          index={4}
+                          colour="#ec4899"
                           name="Project 4"
+                          team="Marketing"
                           lastUpdated="Today"
                           link="test"
                         />,
                         <ProjectTableRow
-                          index={5}
+                          colour="#10b981"
                           name="Project 5"
+                          team="Business Development"
+                          lastUpdated="Today"
+                          link="test"
+                        />,
+                        <ProjectTableRow
+                          colour="#0ea5e9"
+                          name="Project 3"
+                          team="Enginnering"
+                          lastUpdated="Today"
+                          link="test"
+                        />,
+                        <ProjectTableRow
+                          colour="#ec4899"
+                          name="Project 4"
+                          team="Marketing"
+                          lastUpdated="Today"
+                          link="test"
+                        />,
+                        <ProjectTableRow
+                          colour="#10b981"
+                          name="Project 5"
+                          team="Business Development"
+                          lastUpdated="Today"
+                          link="test"
+                        />,
+                        <ProjectTableRow
+                          colour="#0ea5e9"
+                          name="Project 3"
+                          team="Enginnering"
+                          lastUpdated="Today"
+                          link="test"
+                        />,
+                        <ProjectTableRow
+                          colour="#ec4899"
+                          name="Project 4"
+                          team="Marketing"
+                          lastUpdated="Today"
+                          link="test"
+                        />,
+                        <ProjectTableRow
+                          colour="#10b981"
+                          name="Project 5"
+                          team="Business Development"
+                          lastUpdated="Today"
+                          link="test"
+                        />,
+                        <ProjectTableRow
+                          colour="#0ea5e9"
+                          name="Project 3"
+                          team="Enginnering"
+                          lastUpdated="Today"
+                          link="test"
+                        />,
+                        <ProjectTableRow
+                          colour="#ec4899"
+                          name="Project 4"
+                          team="Marketing"
+                          lastUpdated="Today"
+                          link="test"
+                        />,
+                        <ProjectTableRow
+                          colour="#10b981"
+                          name="Project 5"
+                          team="Business Development"
+                          lastUpdated="Today"
+                          link="test"
+                        />,
+                        <ProjectTableRow
+                          colour="#0ea5e9"
+                          name="Project 3"
+                          team="Enginnering"
+                          lastUpdated="Today"
+                          link="test"
+                        />,
+                        <ProjectTableRow
+                          colour="#ec4899"
+                          name="Project 4"
+                          team="Marketing"
+                          lastUpdated="Today"
+                          link="test"
+                        />,
+                        <ProjectTableRow
+                          colour="#10b981"
+                          name="Project 5"
+                          team="Business Development"
+                          lastUpdated="Today"
+                          link="test"
+                        />,
+                        <ProjectTableRow
+                          colour="#0ea5e9"
+                          name="Project 3"
+                          team="Enginnering"
+                          lastUpdated="Today"
+                          link="test"
+                        />,
+                        <ProjectTableRow
+                          colour="#ec4899"
+                          name="Project 4"
+                          team="Marketing"
+                          lastUpdated="Today"
+                          link="test"
+                        />,
+                        <ProjectTableRow
+                          colour="#10b981"
+                          name="Project 5"
+                          team="Business Development"
                           lastUpdated="Today"
                           link="test"
                         />,
                       ]}
                     />
-                    <div className="divider px-3" />
-                    <PinnedList
-                      title="Pinned Teams"
-                      dataArr={[
-                        {
-                          initials: 'TS',
-                          name: 'TEST',
-                          teamColour: 'yellow',
-                          link: 'test',
-                        },
-                        {
-                          initials: 'TS',
-                          name: 'TEST',
-                          teamColour: 'purple',
-                          link: 'test',
-                        },
-                        {
-                          initials: 'TS',
-                          name: 'TEST',
-                          teamColour: 'green',
-                          link: 'test',
-                        },
-                        {
-                          initials: 'TS',
-                          name: 'TEST',
-                          teamColour: 'pink',
-                          link: 'test',
-                        },
-                      ]}
-                    />
-                    {/* <Table
-                      headerArr={['Team', 'Last Updated']}
-                      dataArr={[
-                        ['Placeholder', 'Yesterday'],
-                        ['Placeholder', 'Yesterday'],
-                        ['Placeholder', 'Yesterday'],
-                        ['Placeholder', 'Yesterday'],
-                      ]}
-                    /> */}
                   </div>
                 }
               />
