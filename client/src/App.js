@@ -225,7 +225,6 @@ function App() {
                       ]}
                       rows={[
                         <TaskTableRow
-                          index={1}
                           id="1"
                           name="Task 1"
                           project="Project 1"
@@ -235,7 +234,6 @@ function App() {
                           createdAt="2022-11-25"
                         />,
                         <TaskTableRow
-                          index={2}
                           id="2"
                           name="Task 2"
                           project="Project 2"
@@ -245,7 +243,6 @@ function App() {
                           createdAt="2022-11-25"
                         />,
                         <TaskTableRow
-                          index={3}
                           id="3"
                           name="Task 3"
                           project="Project 3"
@@ -255,7 +252,6 @@ function App() {
                           createdAt="2022-11-25"
                         />,
                         <TaskTableRow
-                          index={4}
                           id="4"
                           name="Task 4"
                           project="Project 4"
@@ -265,7 +261,6 @@ function App() {
                           createdAt="2022-11-25"
                         />,
                         <TaskTableRow
-                          index={5}
                           id="5"
                           name="Task 5"
                           project="Project 5"
