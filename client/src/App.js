@@ -57,7 +57,7 @@ function App() {
                       ]}
                     />
                     <Table
-                      headerArr={['Project', 'Last Updated']}
+                      headerArr={['Projects', 'Last Updated']}
                       rows={[
                         <ProjectTableRow
                           colour="#0ea5e9"
