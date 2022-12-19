@@ -7,7 +7,6 @@ import TaskForm from './TaskForm'
 import Checkbox from './Checkbox'
 
 function TaskTableRow({
-  index,
   id,
   name,
   project,
@@ -21,7 +20,6 @@ function TaskTableRow({
 
   return (
     <tr key={key}>
-      <td>{index}</td>
       <td>{name}</td>
       <td>{project}</td>
       <td>
@@ -84,7 +82,6 @@ function TaskTableRow({
 export default TaskTableRow
 
 TaskTableRow.propTypes = {
-  index: propTypes.number.isRequired,
   id: propTypes.string.isRequired,
   name: propTypes.string.isRequired,
   description: propTypes.string.isRequired,
