@@ -10,6 +10,7 @@ import Header from './components/layout/Header'
 import Modal from './components/common/Modal'
 import TaskForm from './components/common/TaskForm'
 import TaskTableRow from './components/common/TaskTableRow'
+import ProjectTableRow from './components/common/ProjectTableRow'
 
 import { ProjectProvider } from './contexts/ProjectContext'
 
@@ -55,15 +56,41 @@ function App() {
                         },
                       ]}
                     />
-                    {/* <Table
+                    <Table
                       headerArr={['Project', 'Last Updated']}
-                      dataArr={[
-                        ['Placeholder', 'Yesterday'],
-                        ['Placeholder', 'Yesterday'],
-                        ['Placeholder', 'Yesterday'],
-                        ['Placeholder', 'Yesterday'],
+                      rows={[
+                        <ProjectTableRow
+                          index={1}
+                          name="Project 1"
+                          lastUpdated="Today"
+                          link="test"
+                        />,
+                        <ProjectTableRow
+                          index={2}
+                          name="Project 2"
+                          lastUpdated="Today"
+                          link="test"
+                        />,
+                        <ProjectTableRow
+                          index={3}
+                          name="Project 3"
+                          lastUpdated="Today"
+                          link="test"
+                        />,
+                        <ProjectTableRow
+                          index={4}
+                          name="Project 4"
+                          lastUpdated="Today"
+                          link="test"
+                        />,
+                        <ProjectTableRow
+                          index={5}
+                          name="Project 5"
+                          lastUpdated="Today"
+                          link="test"
+                        />,
                       ]}
-                    /> */}
+                    />
                     <div className="divider px-3" />
                     <PinnedList
                       title="Pinned Teams"
