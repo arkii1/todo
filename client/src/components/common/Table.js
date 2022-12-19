@@ -9,10 +9,7 @@ function Table({ headerArr, rows }) {
     <div className="overflow-x-auto w-full px-3">
       <table className="table table-zebra w-full">
         <thead>
-          <tr>
-            <th />
-            {headers}
-          </tr>
+          <tr>{headers}</tr>
         </thead>
         <tbody>{rows}</tbody>
       </table>
