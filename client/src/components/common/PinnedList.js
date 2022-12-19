@@ -8,7 +8,7 @@ function PinnedList({ title, dataArr }) {
   return (
     <div className="pinned-list flex flex-col justify-around px-3 pt-0 pb-3 gap-2">
       <h3 className="text-lg font-normal text-gray-500	">{title}</h3>
-      <div className="flex justify-between">
+      <div className="w-full flex justify-between gap-4">
         {dataArr.map((data) => (
           <PinnedCard
             initials={data.initials}
