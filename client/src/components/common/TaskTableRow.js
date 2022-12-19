@@ -72,7 +72,14 @@ function TaskTableRow({
       <td>
         <Modal
           title="Delete"
-          content={<div>Are you sure you want to delete this task?</div>}
+          content={
+            <div className="flex flex-col items-start justify-center gap-5">
+              Are you sure you want to delete this task?{' '}
+              <button className="btn" type="button">
+                Delete
+              </button>
+            </div>
+          }
         />
       </td>
     </tr>
