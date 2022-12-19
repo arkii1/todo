@@ -7,7 +7,7 @@ function Table({ headerArr, rows }) {
 
   return (
     <div className="overflow-x-auto w-full px-3">
-      <table className="table table-zebra w-full">
+      <table className="table w-full">
         <thead>
           <tr>{headers}</tr>
         </thead>
