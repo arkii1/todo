@@ -19,7 +19,13 @@ function App() {
     <div className="App min-h-screen overflow-x-hidden">
       <ProjectProvider>
         <BrowserRouter>
-          <Navbar />
+          <Navbar
+            projects={[
+              { name: 'Project 1', slug: 'project-1' },
+              { name: 'Project 2', slug: 'project-2' },
+              { name: 'Project 3', slug: 'project-3' },
+            ]}
+          />
           <main className="py-5 flex flex-col justify-start align-start">
             <Header />
             <Routes>
