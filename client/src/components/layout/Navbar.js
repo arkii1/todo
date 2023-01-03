@@ -10,8 +10,6 @@ import {
   faXmark,
 } from '@fortawesome/free-solid-svg-icons'
 import logoipsum from '../../assets/svgs/logoipsum.svg'
-import Modal from '../common/Modal'
-import ProjectForm from '../common/ProjectForm'
 
 import useWindowSize from '../../hooks/useWindowSize'
 import './styles.css'
@@ -59,8 +57,6 @@ function Navbar({ projects = [] }) {
           <h4>{project.name} </h4>
         </Link>
       ))}
-      <Modal title="Create Project" content={<ProjectForm />} />
-      <Modal title="Create Project" content="test 2" />
     </nav>
   ) : (
     <>
@@ -106,7 +102,6 @@ function Navbar({ projects = [] }) {
             <h4>{project.name} </h4>
           </Link>
         ))}
-        <Modal title="Create Project" content={<ProjectForm />} />
       </nav>
     </>
   )
